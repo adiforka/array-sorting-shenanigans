@@ -13,7 +13,7 @@ public class BubbleSorter {
     }
 
     //bubbling largest elements to the right end of the array
-    private void bubbleSort(int[] values) {
+    public void bubbleSort(int[] values) {
 
         boolean needNextPass = true;
 

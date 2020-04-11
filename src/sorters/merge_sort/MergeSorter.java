@@ -8,7 +8,7 @@ public class MergeSorter {
         int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
         System.out.println("Unsorted" + Arrays.toString(list));
         mergeSort(list);
-        System.out.println("After insertion sort applied: " + Arrays.toString(list));
+        System.out.println("After merge sort applied: " + Arrays.toString(list));
     }
 
     private static void mergeSort(int[] list) {
