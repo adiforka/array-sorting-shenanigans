@@ -12,7 +12,7 @@ public class MergeSorter {
     }
 
     private static void mergeSort(int[] list) {
-        //if input array has length > 1, divide it into two halves...
+        //if input array has length > 1, divide it into two halves... (base condition)
         if (list.length > 1) {
             int[] firstHalf = new int[list.length / 2];
             System.arraycopy(list, 0, firstHalf, 0, list.length / 2);
