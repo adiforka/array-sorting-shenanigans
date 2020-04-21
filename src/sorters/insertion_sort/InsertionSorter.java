@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class InsertionSorter {
     public static void main(String[] args) {
 
-        int[] list = {1, 9, 4, 6, 5, -4};
+        int[] list = {1, 9, 342, 9238, -223, 0, 12, 4, 6, 5, -4};
         System.out.println("Unsorted" + Arrays.toString(list));
         insertionSort(list);
         System.out.println("After insertion sort applied: " + Arrays.toString(list));

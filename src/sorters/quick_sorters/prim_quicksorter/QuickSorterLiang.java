@@ -1,4 +1,4 @@
-package sorters.quick_sorters;
+package sorters.quick_sorters.prim_quicksorter;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
@@ -77,6 +77,7 @@ public class QuickSorterLiang {
         } else return first;
     }
 
+    //this just to randomized input array
     public static void shuffle(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int randomIndex = (int) (Math.random() * array.length);

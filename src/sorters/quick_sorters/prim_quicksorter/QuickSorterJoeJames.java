@@ -1,4 +1,4 @@
-package sorters.quick_sorters;
+package sorters.quick_sorters.prim_quicksorter;
 
 import java.util.Arrays;
 import java.util.Random;

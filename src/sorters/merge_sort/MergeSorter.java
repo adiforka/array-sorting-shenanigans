@@ -11,7 +11,7 @@ public class MergeSorter {
         System.out.println("After merge sort applied: " + Arrays.toString(list));
     }
 
-    private static void mergeSort(int[] list) {
+    public static void mergeSort(int[] list) {
         //if input array has length > 1, divide it into two halves... (base condition)
         if (list.length > 1) {
             int[] firstHalf = new int[list.length / 2];
@@ -45,7 +45,7 @@ public class MergeSorter {
                 targetList[current3++] = sourceList2[current2++];
         }
 
-        //if elements remain in one or the other (but not both!) of the partial arrays which
+        //if elements remain in one or the other (but can't in both!) of the partial arrays which
         //have not been put in the target array, assign them all to the target array one after another
         while (current1 < sourceList1.length) {
             targetList[current3++] = sourceList1[current1++];
