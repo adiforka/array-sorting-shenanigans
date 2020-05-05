@@ -39,12 +39,15 @@ public class QuickSorterJoeJames {
 
     private int partition(int[] numbers, int low, int high) {
         swap(numbers, low, getPivot(low, high));
+        int pivot = numbers[low];
         int border = low + 1;
         for (int i = border; i <= high; i++) {
             //if element at index currently considered < pivot
-            if (numbers[i] < numbers[low])
+            if (numbers[i] < pivot)
                 //border will be incremented and its value changed as many times as
                 //value of numbers[i] < pivot
+                //border is always at the last first element looking from the left that is not smaller
+                //than the pivot (it always get swapped for something larget than or equal to the pivot)
                 swap(numbers, i, border++);
         }
 
