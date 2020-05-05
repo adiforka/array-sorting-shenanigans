@@ -1,48 +1,48 @@
 package sorters.quick_sorters.obj_quicksorter;
 
-public class ObjectQuickSorter<T extends Comparable<T>> {
+public class ObjectQuickSorter<E extends Comparable<E>> {
 
-    public void quicksort(T[] words) {
-        quicksort(words, 0, words.length - 1);
+    public void quicksort(E[] array) {
+        quicksort(array, 0, array.length - 1);
 
     }
 
-    private void quicksort(T[] words, int low, int high) {
+    private void quicksort(E[] array, int low, int high) {
         if (low < high) {
-            int pivotIndex = partition(words, low, high);
-            quicksort(words, low, pivotIndex - 1);
-            quicksort(words, pivotIndex + 1, high);
+            int pivotIndex = partition(array, low, high);
+            quicksort(array, low, pivotIndex - 1);
+            quicksort(array, pivotIndex + 1, high);
         }
     }
 
-    private int partition(T[] words, int first, int last) {
-        T pivot = words[first];
+    private int partition(E[] array, int first, int last) {
+        E pivot = array[first];
         int low = first + 1;
         int high = last;
 
         while (low < high) {
-            while (low <= high && words[low].compareTo(pivot) <= 0) {
+            while (low <= high && array[low].compareTo(pivot) <= 0) {
                 low++;
             }
 
-            while (low <= high && words[high].compareTo(pivot) >= 0) {
+            while (low <= high && array[high].compareTo(pivot) >= 0) {
                 high--;
             }
 
             if (low < high) {
-                T temp = words[low];
-                words[low] = words[high];
-                words[high] = temp;
+                E temp = array[low];
+                array[low] = array[high];
+                array[high] = temp;
             }
         }
 
-        while (high > first && words[high].compareTo(pivot) >= 0) {
+        while (high > first && array[high].compareTo(pivot) >= 0) {
             high--;
         }
 
-        if (words[high].compareTo(pivot) < 0) {
-            words[first] = words[high];
-            words[high] = pivot;
+        if (array[high].compareTo(pivot) < 0) {
+            array[first] = array[high];
+            array[high] = pivot;
             return high;
         }
         else return first;

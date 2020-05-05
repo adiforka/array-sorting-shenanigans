@@ -44,14 +44,9 @@ public class QuickSorterJoeJames {
             //if element at index currently considered < pivot
             if (numbers[i] < numbers[low])
                 //border will be incremented and its value changed as many times as
-                //the number of elements < pivot
+                //value of numbers[i] < pivot
                 swap(numbers, i, border++);
         }
-
-        //border == 8, i == 16, high == 15;
-
-
-        //0:0, 1:0, 2:1, 3:3, 4:4, 5:2, 6:1,     7:5,    8:8, 9:7, 10:6, 11:5, 12:9, 13:9, 14:9, 15:9
 
         //put pivot value in the right position (border - 1 becomes pivot index and we return that
         //as an axis for the next partitioning
