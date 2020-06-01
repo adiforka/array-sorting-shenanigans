@@ -16,7 +16,6 @@ public class BubbleSorter {
     public void bubbleSort(int[] values) {
 
         boolean needNextPass = true;
-
         for (int i = 0; i < values.length && needNextPass; i++) {
             //switch to false, and if there are any swaps, which means the array's not yet sorted
             //switch back to true while swapping
