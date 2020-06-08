@@ -1,4 +1,4 @@
-package demo.heapSort;
+package sorters.heapSort;
 
 import java.util.ArrayList;
 import java.util.Arrays;

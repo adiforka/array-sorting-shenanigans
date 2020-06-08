@@ -47,12 +47,12 @@ public class QuickSorterJoeJames {
                 //border will be incremented and its value changed as many times as
                 //value of numbers[i] < pivot
                 //border is always at the last first element looking from the left that is not smaller
-                //than the pivot (it always get swapped for something larget than or equal to the pivot)
+                //than the pivot (it always gets swapped for something larger than or equal to the pivot)
                 swap(numbers, i, border++);
         }
 
         //put pivot value in the right position (border - 1 becomes pivot index and we return that
-        //as an axis for the next partitioning
+        //as an axis for the next partitioning)
         swap(numbers, low, border - 1);
         return border - 1;
     }
