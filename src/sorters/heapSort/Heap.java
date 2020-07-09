@@ -70,7 +70,7 @@ public class Heap<E extends Comparable<E>> {
                 }
             }
 
-            //if current index < max, swap
+            //if element at current index < element at max index, swap
             if (list.get(currentIndex)
                     .compareTo(list.get(maxIndex)) < 0) {
                 E temp = list.get(maxIndex);
@@ -80,7 +80,6 @@ public class Heap<E extends Comparable<E>> {
             }
             //else the tree is already a heap
             else break;
-
         }
         return removedElement;
     }
